@@ -10,7 +10,7 @@ cloudinary.v2.config({
 });
 
 const generateFolder = (req, file) => {
-  return `gadget_shop/${file.fieldname}`;
+  return `music_player/${file.fieldname}`;
 };
 
 // Cloudinary storage
