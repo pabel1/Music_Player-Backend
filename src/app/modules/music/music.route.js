@@ -13,6 +13,7 @@ router.post(
   musicController.createMusic
 );
 router.get("/get-all", musicController.getAllMusic);
+router.get("/single-music/:id", musicController.getSingleMusic);
 
 const musicRouter = router;
 module.exports = musicRouter;

@@ -40,6 +40,9 @@ const musicSchema = new mongoose.Schema(
     compositeKey: {
       type: String,
     },
+    duration: {
+      type: String,
+    },
   },
   {
     timestamps: true,

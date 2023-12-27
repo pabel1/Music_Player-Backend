@@ -99,9 +99,17 @@ const getAllMusicFromDB = async (filters, paginationOptions) => {
     data: result,
   };
 };
+
+const singleMusicFromDB = async (id) => {
+  const result = await MusicModel.findById(id);
+  return {
+    data: result,
+  };
+};
 const musicServices = {
   createMusicIntoDB,
   getAllMusicFromDB,
+  singleMusicFromDB,
 };
 
 module.exports = musicServices;

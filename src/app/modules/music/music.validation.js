@@ -11,6 +11,7 @@ const musicValidationSchema = Joi.object({
   }),
   musicUrl: Joi.string().required(),
   musicDetails: Joi.string(),
+  duration: Joi.string(),
   genre: Joi.string(),
   compositeKey: Joi.string(),
 });

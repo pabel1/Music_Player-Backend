@@ -53,8 +53,22 @@ const getAllMusic = catchAsyncError(async (req, res) => {
   });
 });
 
+const getSingleMusic = catchAsyncError(async (req, res) => {
+  const { id } = req.params;
+  const result = await musicServices.singleMusicFromDB(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "get  music  successfully",
+
+    data: result.data,
+  });
+});
+
 const musicController = {
   createMusic,
   getAllMusic,
+  getSingleMusic,
 };
 module.exports = musicController;
